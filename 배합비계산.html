@@ -22,7 +22,6 @@
     padding: 24px 16px;
   }
 
-  /* 헤더 */
   .header {
     background: #fff;
     border-radius: 12px;
@@ -39,10 +38,7 @@
     letter-spacing: -0.5px;
   }
 
-  .header h1 span {
-    font-weight: 800;
-    letter-spacing: 1px;
-  }
+  .header h1 span { font-weight: 800; letter-spacing: 1px; }
 
   .btn-group {
     display: flex;
@@ -65,19 +61,14 @@
   }
 
   .btn:active { transform: scale(0.97); }
-
   .btn-save { background: #1a56db; color: #fff; }
   .btn-save:hover { background: #1648b8; }
-
   .btn-load { background: #059669; color: #fff; }
   .btn-load:hover { background: #047857; }
-
   .btn-delete { background: #dc2626; color: #fff; }
   .btn-delete:hover { background: #b91c1c; }
-
   .btn-reset { background: #6b7280; color: #fff; }
   .btn-reset:hover { background: #4b5563; }
-
   .btn-add { background: #2563eb; color: #fff; }
   .btn-add:hover { background: #1d4ed8; }
 
@@ -100,10 +91,7 @@
     background: #fff;
   }
 
-  .load-section select:focus {
-    outline: none;
-    border-color: #1a56db;
-  }
+  .load-section select:focus { outline: none; border-color: #1a56db; }
 
   /* 버전 이력 바 */
   .version-bar {
@@ -124,11 +112,7 @@
     margin-bottom: 10px;
   }
 
-  .version-tabs {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
+  .version-tabs { display: flex; gap: 6px; flex-wrap: wrap; }
 
   .version-tab {
     padding: 8px 16px;
@@ -147,33 +131,14 @@
     gap: 2px;
   }
 
-  .version-tab:hover {
-    border-color: #93c5fd;
-    background: #eff6ff;
-  }
+  .version-tab:hover { border-color: #93c5fd; background: #eff6ff; }
 
-  .version-tab.active {
-    background: #1a56db;
-    color: #fff;
-    border-color: #1a56db;
-  }
+  .version-tab.active { background: #1a56db; color: #fff; border-color: #1a56db; }
+  .version-tab.active .version-date { color: #bfdbfe; }
 
-  .version-tab.active .version-date {
-    color: #bfdbfe;
-  }
+  .version-tab .version-label { font-weight: 700; font-size: 13px; }
+  .version-tab .version-date { font-size: 10px; color: #9ca3af; font-weight: 400; }
 
-  .version-tab .version-label {
-    font-weight: 700;
-    font-size: 13px;
-  }
-
-  .version-tab .version-date {
-    font-size: 10px;
-    color: #9ca3af;
-    font-weight: 400;
-  }
-
-  /* 읽기전용 안내 */
   .readonly-banner {
     background: #fef3c7;
     border: 1.5px solid #f59e0b;
@@ -252,27 +217,16 @@
 
   thead th:first-child { border-radius: 8px 0 0 0; }
   thead th:last-child { border-radius: 0 8px 0 0; }
-
-  thead th.sortable {
-    cursor: pointer;
-    user-select: none;
-    position: relative;
-  }
-
-  thead th.sortable:hover {
-    background: #1648b8;
-  }
-
-  .sort-arrow {
-    margin-left: 4px;
-    font-size: 11px;
-  }
+  thead th.sortable { cursor: pointer; user-select: none; }
+  thead th.sortable:hover { background: #1648b8; }
+  .sort-arrow { margin-left: 4px; font-size: 11px; }
 
   tbody td {
     padding: 6px 6px;
     border: 1px solid #e5e7eb;
     text-align: center;
     vertical-align: middle;
+    position: relative;
   }
 
   tbody tr:hover { background: #f8fafc; }
@@ -295,20 +249,9 @@
     background: #eff6ff;
   }
 
-  tbody td input.amount-input {
-    font-weight: 500;
-    color: #1e40af;
-  }
-
-  tbody td input[readonly] {
-    color: #6b7280;
-    cursor: default;
-  }
-
-  tbody td input[readonly]:focus {
-    border-color: transparent;
-    background: transparent;
-  }
+  tbody td input.amount-input { font-weight: 500; color: #1e40af; }
+  tbody td input[readonly] { color: #6b7280; cursor: default; }
+  tbody td input[readonly]:focus { border-color: transparent; background: transparent; }
 
   .col-no { width: 45px; }
   .col-type { width: 100px; }
@@ -319,17 +262,8 @@
   .col-allergen { width: 80px; }
   .col-del { width: 50px; }
 
-  .ratio-cell {
-    font-weight: 600;
-    color: #1a56db;
-    font-size: 13px;
-  }
-
-  .no-cell {
-    font-weight: 600;
-    color: #6b7280;
-    font-size: 13px;
-  }
+  .ratio-cell { font-weight: 600; color: #1a56db; font-size: 13px; }
+  .no-cell { font-weight: 600; color: #6b7280; font-size: 13px; }
 
   .total-row td {
     background: #f1f5f9;
@@ -353,16 +287,55 @@
     transition: all 0.15s;
   }
 
-  .btn-row-del:hover {
-    background: #fee2e2;
-    color: #dc2626;
-  }
+  .btn-row-del:hover { background: #fee2e2; color: #dc2626; }
 
   .table-footer {
     display: flex;
     justify-content: flex-start;
     margin-top: 12px;
   }
+
+  /* ── 자동완성 드롭다운 ── */
+  .ac-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1.5px solid #d1d5db;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    z-index: 100;
+    max-height: 180px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: none;
+  }
+
+  .ac-list.show { display: block; }
+
+  .ac-item {
+    padding: 8px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ac-item:hover, .ac-item.active {
+    background: #eff6ff;
+    color: #1a56db;
+  }
+
+  .ac-item .ac-type {
+    font-size: 11px;
+    color: #9ca3af;
+    margin-left: 8px;
+  }
+
+  .ac-item.active .ac-type { color: #60a5fa; }
 
   /* 커스텀 모달 */
   .modal-overlay {
@@ -378,10 +351,7 @@
     transition: all 0.2s;
   }
 
-  .modal-overlay.show {
-    opacity: 1;
-    visibility: visible;
-  }
+  .modal-overlay.show { opacity: 1; visibility: visible; }
 
   .modal-box {
     background: #fff;
@@ -395,9 +365,7 @@
     transition: transform 0.2s;
   }
 
-  .modal-overlay.show .modal-box {
-    transform: scale(1);
-  }
+  .modal-overlay.show .modal-box { transform: scale(1); }
 
   .modal-close {
     position: absolute;
@@ -417,16 +385,9 @@
     transition: all 0.15s;
   }
 
-  .modal-close:hover {
-    background: #f3f4f6;
-    color: #374151;
-  }
+  .modal-close:hover { background: #f3f4f6; color: #374151; }
 
-  .modal-icon {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 12px;
-  }
+  .modal-icon { font-size: 36px; text-align: center; margin-bottom: 12px; }
 
   .modal-msg {
     font-size: 15px;
@@ -435,13 +396,10 @@
     text-align: center;
     line-height: 1.5;
     margin-bottom: 24px;
+    white-space: pre-line;
   }
 
-  .modal-btns {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-  }
+  .modal-btns { display: flex; gap: 10px; justify-content: center; }
 
   .modal-btn {
     padding: 10px 28px;
@@ -455,19 +413,9 @@
   }
 
   .modal-btn:active { transform: scale(0.97); }
-
-  .modal-btn-cancel {
-    background: #f3f4f6;
-    color: #374151;
-  }
-
+  .modal-btn-cancel { background: #f3f4f6; color: #374151; }
   .modal-btn-cancel:hover { background: #e5e7eb; }
-
-  .modal-btn-confirm {
-    background: #dc2626;
-    color: #fff;
-  }
-
+  .modal-btn-confirm { background: #dc2626; color: #fff; }
   .modal-btn-confirm:hover { background: #b91c1c; }
 
   /* 토스트 */
@@ -488,10 +436,7 @@
     pointer-events: none;
   }
 
-  .toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
   .loading-overlay {
     position: fixed;
@@ -531,7 +476,6 @@
 <body>
 
 <div class="container">
-  <!-- 헤더 -->
   <div class="header">
     <h1><span>BBANG SSAEM</span> 배합비 계산</h1>
     <div class="btn-group">
@@ -547,18 +491,15 @@
     </div>
   </div>
 
-  <!-- 버전 이력 바 -->
   <div class="version-bar" id="versionBar">
     <div class="version-bar-title">📋 수정 이력</div>
     <div class="version-tabs" id="versionTabs"></div>
   </div>
 
-  <!-- 읽기전용 안내 -->
   <div class="readonly-banner" id="readonlyBanner">
     ⚠️ 과거 이력 열람 중 — 수정하려면 최신 버전 탭을 선택 후 저장하세요
   </div>
 
-  <!-- 테이블 -->
   <div class="table-card">
     <div class="product-row">
       <label>제 품 명 :</label>
@@ -577,8 +518,7 @@
           <th class="col-del"></th>
         </tr>
       </thead>
-      <tbody id="tableBody">
-      </tbody>
+      <tbody id="tableBody"></tbody>
       <tfoot>
         <tr class="total-row">
           <td colspan="4" style="text-align:right; padding-right:16px;">합 계</td>
@@ -594,33 +534,25 @@
   </div>
 </div>
 
-<!-- 커스텀 모달 -->
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal()">✕</button>
-    <div class="modal-icon" id="modalIcon">⚠️</div>
+    <div class="modal-icon">⚠️</div>
     <div class="modal-msg" id="modalMsg"></div>
     <div class="modal-btns">
       <button class="modal-btn modal-btn-cancel" onclick="closeModal()">취소</button>
-      <button class="modal-btn modal-btn-confirm" id="modalConfirmBtn" onclick="">확인</button>
+      <button class="modal-btn modal-btn-confirm" id="modalConfirmBtn">확인</button>
     </div>
   </div>
 </div>
 
-<!-- 토스트 -->
 <div class="toast" id="toast"></div>
+<div class="loading-overlay hidden" id="loading"><div class="spinner"></div></div>
 
-<!-- 로딩 -->
-<div class="loading-overlay hidden" id="loading">
-  <div class="spinner"></div>
-</div>
-
-<!-- Firebase SDK -->
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
 <script>
-  // Firebase 초기화
   const firebaseConfig = {
     apiKey: "AIzaSyDVnVaaNG7dGsmMKJmU4eeYVRaJen_Sa6Y",
     authDomain: "m-db-6fe4e.firebaseapp.com",
@@ -634,69 +566,204 @@
   const db = firebase.firestore();
   const COLLECTION = 'appData';
   const DOC_ID = 'recipes';
+  const DICT_DOC_ID = 'recipes_materialDict';
 
   let rowCounter = 0;
   let currentRecipeData = null;
   let currentVersion = null;
   let isReadonly = false;
-
-  // 정렬 상태: 0=원래순서, 1=내림차순, 2=오름차순
   let sortState = 0;
-  let originalOrder = []; // 원래 입력 순서 저장
+  let originalOrder = [];
+
+  // 원료사전: { "제빵용밀가루": "밀가루", ... }
+  let materialDict = {};
 
   // ─────────────────────────────
-  // 커스텀 모달
+  // 원료사전 로드/저장
   // ─────────────────────────────
-  function openModal(msg, onConfirm) {
-    document.getElementById('modalMsg').textContent = msg;
-    const confirmBtn = document.getElementById('modalConfirmBtn');
-    confirmBtn.onclick = () => {
-      closeModal();
-      onConfirm();
-    };
-    document.getElementById('modalOverlay').classList.add('show');
+  async function loadMaterialDict() {
+    try {
+      const doc = await db.collection(COLLECTION).doc(DICT_DOC_ID).get();
+      if (doc.exists) materialDict = doc.data();
+    } catch (e) { console.error('원료사전 로드 실패:', e); }
   }
 
-  function closeModal() {
-    document.getElementById('modalOverlay').classList.remove('show');
+  async function saveMaterialDict(newEntries) {
+    try {
+      let updated = false;
+      for (const [name, type] of Object.entries(newEntries)) {
+        if (name && type && materialDict[name] !== type) {
+          materialDict[name] = type;
+          updated = true;
+        }
+      }
+      if (updated) {
+        await db.collection(COLLECTION).doc(DICT_DOC_ID).set(materialDict);
+      }
+    } catch (e) { console.error('원료사전 저장 실패:', e); }
   }
 
-  function confirmDelete() {
-    const select = document.getElementById('recipeList');
-    const selectedName = select.value;
-    if (!selectedName) {
-      showToast('삭제할 레시피를 선택해 주세요.');
-      return;
+  // ─────────────────────────────
+  // 자동완성
+  // ─────────────────────────────
+  function setupAutocomplete(nameInput, typeInput) {
+    // ac-list 생성
+    const td = nameInput.closest('td');
+    let acList = td.querySelector('.ac-list');
+    if (!acList) {
+      acList = document.createElement('div');
+      acList.className = 'ac-list';
+      td.appendChild(acList);
     }
-    openModal(`"${selectedName}" 레시피의\n모든 버전을 삭제하시겠습니까?`, () => deleteRecipe(selectedName));
+
+    let acIndex = -1;
+
+    nameInput.addEventListener('input', () => {
+      const val = nameInput.value.trim();
+      acList.innerHTML = '';
+      acIndex = -1;
+
+      if (!val) { acList.classList.remove('show'); return; }
+
+      const matches = Object.keys(materialDict)
+        .filter(k => k.includes(val))
+        .slice(0, 6);
+
+      if (matches.length === 0) { acList.classList.remove('show'); return; }
+
+      matches.forEach((name, i) => {
+        const item = document.createElement('div');
+        item.className = 'ac-item';
+        item.dataset.index = i;
+        item.innerHTML = `<span>${name}</span><span class="ac-type">${materialDict[name]}</span>`;
+        item.addEventListener('mousedown', (e) => {
+          e.preventDefault();
+          selectAcItem(nameInput, typeInput, name, acList);
+        });
+        acList.appendChild(item);
+      });
+
+      acList.classList.add('show');
+    });
+
+    nameInput.addEventListener('keydown', (e) => {
+      const items = acList.querySelectorAll('.ac-item');
+      if (!acList.classList.contains('show') || items.length === 0) return;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        acIndex = Math.min(acIndex + 1, items.length - 1);
+        updateAcActive(items, acIndex);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        acIndex = Math.max(acIndex - 1, 0);
+        updateAcActive(items, acIndex);
+      } else if (e.key === 'Enter' && acIndex >= 0) {
+        e.preventDefault();
+        e.stopPropagation();
+        const name = items[acIndex].querySelector('span').textContent;
+        selectAcItem(nameInput, typeInput, name, acList);
+      } else if (e.key === 'Escape') {
+        acList.classList.remove('show');
+        acIndex = -1;
+      }
+    });
+
+    nameInput.addEventListener('blur', () => {
+      setTimeout(() => {
+        acList.classList.remove('show');
+        acIndex = -1;
+      }, 150);
+    });
   }
 
-  function confirmReset() {
-    openModal('입력 내용을 모두 초기화하시겠습니까?', resetAll);
+  function selectAcItem(nameInput, typeInput, name, acList) {
+    nameInput.value = name;
+    typeInput.value = materialDict[name] || '';
+    acList.classList.remove('show');
+    // 다음 칸(내용)으로 이동
+    const tr = nameInput.closest('tr');
+    const inputs = getRowInputs(tr);
+    const descIdx = 2; // 내용 칸
+    if (inputs[descIdx]) inputs[descIdx].focus();
+  }
+
+  function updateAcActive(items, idx) {
+    items.forEach((el, i) => el.classList.toggle('active', i === idx));
+  }
+
+  // ─────────────────────────────
+  // 키보드 네비게이션 (Tab=오른쪽, Enter=아래)
+  // ─────────────────────────────
+  function setupKeyNav(tr) {
+    const inputs = getRowInputs(tr);
+    inputs.forEach((input, colIdx) => {
+      input.addEventListener('keydown', (e) => {
+        // 자동완성 드롭다운이 열려있으면 스킵 (자동완성이 처리)
+        const acList = input.closest('td')?.querySelector('.ac-list.show');
+        if (acList && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) return;
+        if (acList && e.key === 'Enter') return;
+
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          const allRows = Array.from(document.querySelectorAll('#tableBody tr'));
+          const rowIdx = allRows.indexOf(tr);
+
+          if (rowIdx === allRows.length - 1) {
+            // 마지막 행 → 새 행 추가
+            const newTr = addRow();
+            if (newTr) {
+              const newInputs = getRowInputs(newTr);
+              if (newInputs[colIdx]) newInputs[colIdx].focus();
+              else if (newInputs[0]) newInputs[0].focus();
+            }
+          } else {
+            // 아래 행 같은 열로 이동
+            const nextRow = allRows[rowIdx + 1];
+            const nextInputs = getRowInputs(nextRow);
+            if (nextInputs[colIdx]) nextInputs[colIdx].focus();
+          }
+        }
+      });
+    });
+  }
+
+  function getRowInputs(tr) {
+    // 식품유형, 재료명, 내용, 투입량, 알레르기 (No, 구성비, 삭제 제외)
+    return Array.from(tr.querySelectorAll('input'));
   }
 
   // ─────────────────────────────
   // 행 관리
   // ─────────────────────────────
   function addRow(data = {}) {
-    if (isReadonly) return;
+    if (isReadonly) return null;
     rowCounter++;
     const tbody = document.getElementById('tableBody');
     const tr = document.createElement('tr');
-    tr.dataset.rowId = rowCounter;
+    tr.dataset.rowId = String(rowCounter);
 
     tr.innerHTML = `
       <td class="no-cell">${tbody.children.length + 1}</td>
-      <td><input type="text" value="${escHtml(data.foodType || '')}" placeholder="식품유형"></td>
-      <td><input type="text" value="${escHtml(data.materialName || '')}" placeholder="재료명"></td>
-      <td><input type="text" value="${escHtml(data.description || '')}" placeholder="내용"></td>
-      <td><input type="number" class="amount-input" value="${data.amount || ''}" placeholder="0" step="any" oninput="calcRatio()"></td>
+      <td><input type="text" data-col="type" value="${escHtml(data.foodType || '')}" placeholder="식품유형"></td>
+      <td><input type="text" data-col="name" value="${escHtml(data.materialName || '')}" placeholder="재료명"></td>
+      <td><input type="text" data-col="desc" value="${escHtml(data.description || '')}" placeholder="내용"></td>
+      <td><input type="number" data-col="amount" class="amount-input" value="${data.amount || ''}" placeholder="0" step="any" oninput="calcRatio()"></td>
       <td class="ratio-cell">${data.amount ? '0.00' : ''}</td>
-      <td><input type="text" value="${escHtml(data.allergen || '')}" placeholder=""></td>
+      <td><input type="text" data-col="allergen" value="${escHtml(data.allergen || '')}" placeholder=""></td>
       <td><button class="btn-row-del" onclick="deleteRow(this)" title="삭제">✕</button></td>
     `;
 
     tbody.appendChild(tr);
+
+    // 자동완성 세팅
+    const typeInput = tr.querySelector('[data-col="type"]');
+    const nameInput = tr.querySelector('[data-col="name"]');
+    setupAutocomplete(nameInput, typeInput);
+
+    // 키보드 네비게이션 세팅
+    setupKeyNav(tr);
+
     calcRatio();
     return tr;
   }
@@ -745,17 +812,11 @@
   function calcRatio() {
     const rows = document.querySelectorAll('#tableBody tr');
     let total = 0;
-
-    rows.forEach(tr => {
-      total += parseFloat(tr.querySelector('.amount-input').value) || 0;
-    });
-
+    rows.forEach(tr => { total += parseFloat(tr.querySelector('.amount-input').value) || 0; });
     rows.forEach(tr => {
       const val = parseFloat(tr.querySelector('.amount-input').value) || 0;
-      const ratioCell = tr.querySelector('.ratio-cell');
-      ratioCell.textContent = (total > 0 && val > 0) ? ((val / total) * 100).toFixed(2) : '';
+      tr.querySelector('.ratio-cell').textContent = (total > 0 && val > 0) ? ((val / total) * 100).toFixed(2) : '';
     });
-
     document.getElementById('totalAmount').textContent = total > 0 ? total.toFixed(3) : '0.000';
     document.getElementById('totalRatio').textContent = total > 0 ? '100.00' : '0.00';
   }
@@ -770,7 +831,6 @@
     const rows = Array.from(tbody.querySelectorAll('tr'));
 
     if (sortState === 0) {
-      // 원래 순서 복원
       arrow.textContent = '';
       if (originalOrder.length > 0) {
         originalOrder.forEach(id => {
@@ -779,21 +839,15 @@
         });
       }
     } else {
-      // 정렬 전 원래 순서 저장 (최초 1회)
-      if (sortState === 1) {
-        originalOrder = rows.map(r => r.dataset.rowId);
-      }
-
+      if (sortState === 1) originalOrder = rows.map(r => r.dataset.rowId);
       rows.sort((a, b) => {
         const va = parseFloat(a.querySelector('.amount-input').value) || 0;
         const vb = parseFloat(b.querySelector('.amount-input').value) || 0;
         return sortState === 1 ? vb - va : va - vb;
       });
-
       arrow.textContent = sortState === 1 ? ' ▼' : ' ▲';
       rows.forEach(tr => tbody.appendChild(tr));
     }
-
     reNumberRows();
   }
 
@@ -804,7 +858,7 @@
   }
 
   // ─────────────────────────────
-  // 읽기전용 모드 전환
+  // 읽기전용 / 버전탭
   // ─────────────────────────────
   function setReadonly(readonly) {
     isReadonly = readonly;
@@ -812,26 +866,15 @@
     document.getElementById('tableFooter').style.display = readonly ? 'none' : 'flex';
   }
 
-  // ─────────────────────────────
-  // 버전 탭 렌더링
-  // ─────────────────────────────
   function renderVersionTabs(recipeData, activeVer) {
     const bar = document.getElementById('versionBar');
     const tabs = document.getElementById('versionTabs');
     tabs.innerHTML = '';
-
-    if (!recipeData || !recipeData.versions) {
-      bar.classList.remove('show');
-      return;
-    }
+    if (!recipeData || !recipeData.versions) { bar.classList.remove('show'); return; }
 
     const versions = recipeData.versions;
     const verNums = Object.keys(versions).map(Number).sort((a, b) => a - b);
-
-    if (verNums.length === 0) {
-      bar.classList.remove('show');
-      return;
-    }
+    if (verNums.length === 0) { bar.classList.remove('show'); return; }
 
     bar.classList.add('show');
     const latestVer = recipeData.currentVersion || verNums[verNums.length - 1];
@@ -839,16 +882,11 @@
     verNums.forEach(v => {
       const btn = document.createElement('button');
       btn.className = 'version-tab' + (v === activeVer ? ' active' : '');
-
-      const savedAt = versions[v].savedAt || '';
-      const dateStr = savedAt ? formatDate(savedAt) : '';
-      const isLatest = (v === latestVer);
-
+      const dateStr = versions[v].savedAt ? formatDate(versions[v].savedAt) : '';
       btn.innerHTML = `
-        <span class="version-label">${v}차${isLatest ? ' (최신)' : ''}</span>
+        <span class="version-label">${v}차${v === latestVer ? ' (최신)' : ''}</span>
         <span class="version-date">${dateStr}</span>
       `;
-
       btn.onclick = () => loadVersion(recipeData, v, latestVer);
       tabs.appendChild(btn);
     });
@@ -857,74 +895,75 @@
   function formatDate(isoStr) {
     try {
       const d = new Date(isoStr);
-      const y = d.getFullYear();
-      const m = String(d.getMonth() + 1).padStart(2, '0');
-      const day = String(d.getDate()).padStart(2, '0');
-      const h = String(d.getHours()).padStart(2, '0');
-      const min = String(d.getMinutes()).padStart(2, '0');
-      return `${y}.${m}.${day} ${h}:${min}`;
-    } catch {
-      return '';
-    }
+      return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')} ${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+    } catch { return ''; }
   }
 
-  // ─────────────────────────────
-  // 특정 버전 로드
-  // ─────────────────────────────
   function loadVersion(recipeData, verNum, latestVer) {
     currentVersion = verNum;
     const verData = recipeData.versions[verNum];
     if (!verData) return;
-
     document.getElementById('tableBody').innerHTML = '';
     rowCounter = 0;
     resetSort();
-
     const isLatest = (verNum === latestVer);
     setReadonly(!isLatest);
-
-    if (isLatest) {
-      verData.ingredients.forEach(ing => addRow(ing));
-    } else {
-      verData.ingredients.forEach(ing => addRowReadonly(ing));
-    }
-
+    verData.ingredients.forEach(ing => isLatest ? addRow(ing) : addRowReadonly(ing));
     calcRatio();
     renderVersionTabs(recipeData, verNum);
   }
 
   // ─────────────────────────────
-  // Firebase 저장 (버전 추가)
+  // 커스텀 모달
+  // ─────────────────────────────
+  function openModal(msg, onConfirm) {
+    document.getElementById('modalMsg').textContent = msg;
+    const confirmBtn = document.getElementById('modalConfirmBtn');
+    confirmBtn.onclick = () => { closeModal(); onConfirm(); };
+    document.getElementById('modalOverlay').classList.add('show');
+  }
+
+  function closeModal() {
+    document.getElementById('modalOverlay').classList.remove('show');
+  }
+
+  function confirmDelete() {
+    const sel = document.getElementById('recipeList').value;
+    if (!sel) { showToast('삭제할 레시피를 선택해 주세요.'); return; }
+    openModal(`"${sel}" 레시피의\n모든 버전을 삭제하시겠습니까?`, () => deleteRecipe(sel));
+  }
+
+  function confirmReset() {
+    openModal('입력 내용을 모두 초기화하시겠습니까?', resetAll);
+  }
+
+  // ─────────────────────────────
+  // Firebase 저장
   // ─────────────────────────────
   async function saveRecipe() {
-    if (isReadonly) {
-      showToast('과거 이력은 수정할 수 없습니다. 최신 버전 탭을 선택해 주세요.');
-      return;
-    }
+    if (isReadonly) { showToast('과거 이력은 수정할 수 없습니다. 최신 버전 탭을 선택해 주세요.'); return; }
 
     const productName = document.getElementById('productName').value.trim();
-    if (!productName) {
-      showToast('제품명을 입력해 주세요.');
-      return;
-    }
+    if (!productName) { showToast('제품명을 입력해 주세요.'); return; }
 
     const rows = document.querySelectorAll('#tableBody tr');
-    if (rows.length === 0) {
-      showToast('원재료를 추가해 주세요.');
-      return;
-    }
+    if (rows.length === 0) { showToast('원재료를 추가해 주세요.'); return; }
 
     const ingredients = [];
+    const dictEntries = {};
     rows.forEach((tr, i) => {
       const inputs = tr.querySelectorAll('input');
+      const foodType = inputs[0].value.trim();
+      const materialName = inputs[1].value.trim();
       ingredients.push({
         no: i + 1,
-        foodType: inputs[0].value.trim(),
-        materialName: inputs[1].value.trim(),
+        foodType,
+        materialName,
         description: inputs[2].value.trim(),
         amount: parseFloat(inputs[3].value) || 0,
         allergen: inputs[4].value.trim()
       });
+      if (materialName && foodType) dictEntries[materialName] = foodType;
     });
 
     showLoading(true);
@@ -935,28 +974,24 @@
 
       let recipe = allRecipes[productName];
       let newVer = 1;
-
       if (recipe && recipe.versions) {
-        const existingVers = Object.keys(recipe.versions).map(Number);
-        newVer = Math.max(...existingVers) + 1;
+        newVer = Math.max(...Object.keys(recipe.versions).map(Number)) + 1;
       } else {
-        recipe = { productName: productName, versions: {} };
+        recipe = { productName, versions: {} };
       }
 
-      recipe.versions[newVer] = {
-        ingredients: ingredients,
-        savedAt: new Date().toISOString()
-      };
+      recipe.versions[newVer] = { ingredients, savedAt: new Date().toISOString() };
       recipe.currentVersion = newVer;
       recipe.updatedAt = new Date().toISOString();
-
       allRecipes[productName] = recipe;
       await docRef.set(allRecipes);
+
+      // 원료사전 업데이트
+      await saveMaterialDict(dictEntries);
 
       currentRecipeData = recipe;
       currentVersion = newVer;
       resetSort();
-
       renderVersionTabs(recipe, newVer);
       setReadonly(false);
 
@@ -970,13 +1005,12 @@
   }
 
   // ─────────────────────────────
-  // Firebase 목록 로드 (날짜 포함)
+  // Firebase 목록 로드
   // ─────────────────────────────
   async function loadRecipeList() {
     try {
       const docRef = db.collection(COLLECTION).doc(DOC_ID);
       const docSnap = await docRef.get();
-
       const select = document.getElementById('recipeList');
       const currentVal = select.value;
       select.innerHTML = '<option value="">-- 저장된 레시피 선택 --</option>';
@@ -988,57 +1022,39 @@
           const recipe = data[name];
           const opt = document.createElement('option');
           opt.value = name;
-
           if (recipe.versions) {
             const verNums = Object.keys(recipe.versions).map(Number);
             const latestVer = Math.max(...verNums);
-            const latestData = recipe.versions[latestVer];
-            const dateStr = latestData.savedAt ? formatDate(latestData.savedAt) : '';
-            opt.textContent = dateStr
-              ? `${name} (${latestVer}차 · ${dateStr})`
-              : `${name} (${latestVer}차)`;
+            const dateStr = recipe.versions[latestVer].savedAt ? formatDate(recipe.versions[latestVer].savedAt) : '';
+            opt.textContent = dateStr ? `${name} (${latestVer}차 · ${dateStr})` : `${name} (${latestVer}차)`;
           } else {
             opt.textContent = name;
           }
-
           select.appendChild(opt);
         });
-
-        if (currentVal && names.includes(currentVal)) {
-          select.value = currentVal;
-        }
+        if (currentVal && names.includes(currentVal)) select.value = currentVal;
       }
-    } catch (err) {
-      console.error('목록 로드 실패:', err);
-    }
+    } catch (err) { console.error('목록 로드 실패:', err); }
   }
 
   // ─────────────────────────────
-  // Firebase 불러오기 (최신 버전)
+  // Firebase 불러오기
   // ─────────────────────────────
   async function loadRecipe() {
-    const select = document.getElementById('recipeList');
-    const selectedName = select.value;
-    if (!selectedName) {
-      showToast('불러올 레시피를 선택해 주세요.');
-      return;
-    }
+    const selectedName = document.getElementById('recipeList').value;
+    if (!selectedName) { showToast('불러올 레시피를 선택해 주세요.'); return; }
 
     showLoading(true);
     try {
-      const docRef = db.collection(COLLECTION).doc(DOC_ID);
-      const docSnap = await docRef.get();
-
+      const docSnap = await db.collection(COLLECTION).doc(DOC_ID).get();
       if (docSnap.exists && docSnap.data()[selectedName]) {
         const recipe = docSnap.data()[selectedName];
         currentRecipeData = recipe;
         resetSort();
-
         document.getElementById('productName').value = recipe.productName || selectedName;
 
         if (recipe.versions) {
-          const latestVer = recipe.currentVersion ||
-            Math.max(...Object.keys(recipe.versions).map(Number));
+          const latestVer = recipe.currentVersion || Math.max(...Object.keys(recipe.versions).map(Number));
           loadVersion(recipe, latestVer, latestVer);
           showToast(`"${selectedName}" ${latestVer}차 불러오기 완료!`);
         } else if (recipe.ingredients) {
@@ -1069,18 +1085,15 @@
     try {
       const docRef = db.collection(COLLECTION).doc(DOC_ID);
       const docSnap = await docRef.get();
-
       if (docSnap.exists) {
         const data = docSnap.data();
         delete data[selectedName];
         await docRef.set(data);
-
         currentRecipeData = null;
         currentVersion = null;
         document.getElementById('versionBar').classList.remove('show');
         setReadonly(false);
         resetSort();
-
         showToast(`"${selectedName}" 삭제 완료!`);
         await loadRecipeList();
       }
@@ -1110,13 +1123,13 @@
   }
 
   // ─────────────────────────────
-  // 토스트 & 로딩
+  // 유틸
   // ─────────────────────────────
   function showToast(msg) {
-    const toast = document.getElementById('toast');
-    toast.textContent = msg;
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2500);
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2500);
   }
 
   function showLoading(show) {
@@ -1126,9 +1139,15 @@
   // ─────────────────────────────
   // 초기 실행
   // ─────────────────────────────
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('DOMContentLoaded', async () => {
+    await loadMaterialDict();
     for (let i = 0; i < 5; i++) addRow();
     loadRecipeList();
+  });
+
+  // 모달 외부 클릭 차단 (배경 클릭해도 안 닫힘)
+  document.getElementById('modalOverlay').addEventListener('click', (e) => {
+    // 아무것도 안 함 — X버튼이나 취소로만 닫힘
   });
 </script>
 
