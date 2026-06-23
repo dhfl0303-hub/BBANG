@@ -63,8 +63,7 @@
   .btn:active { transform: scale(0.97); }
   .btn-save { background: #1a56db; color: #fff; }
   .btn-save:hover { background: #1648b8; }
-  .btn-load { background: #059669; color: #fff; }
-  .btn-load:hover { background: #047857; }
+
   .btn-delete { background: #dc2626; color: #fff; }
   .btn-delete:hover { background: #b91c1c; }
   .btn-reset { background: #6b7280; color: #fff; }
@@ -486,7 +485,6 @@
       <select id="recipeList" onchange="loadRecipe()">
         <option value="">-- 저장된 레시피 선택 --</option>
       </select>
-      <button class="btn btn-load" onclick="loadRecipe()">📂 불러오기</button>
       <button class="btn btn-delete" onclick="confirmDelete()">🗑️ 삭제</button>
     </div>
   </div>
